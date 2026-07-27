@@ -1,0 +1,562 @@
+/* =========================
+   GLOBAL LAYOUT
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(135deg, #eef2ff 0%, #f8fafc 45%, #e0f2fe 100%);
+  color: #1e293b;
+}
+
+.container {
+  width: 92%;
+  max-width: 1100px;
+  margin: 40px auto;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.header h1 {
+  font-size: 42px;
+  color: #2563eb;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.header p {
+  color: #64748b;
+  font-size: 17px;
+}
+
+/* =========================
+   BALANCE CARD
+========================= */
+
+.balance-container {
+  background: linear-gradient(
+    135deg,
+    #2563eb,
+    #4f46e5,
+    #7c3aed
+  );
+  color: white;
+  border-radius: 22px;
+  padding: 35px;
+  margin-bottom: 35px;
+  text-align: center;
+  box-shadow: 0 20px 45px rgba(37, 99, 235, .30);
+  transition: .35s;
+}
+
+.balance-container:hover {
+  transform: translateY(-6px);
+}
+
+.balance-container h2 {
+  font-size: 34px;
+  margin-bottom: 10px;
+}
+
+.balance-container h3 {
+  font-weight: 400;
+  opacity: .9;
+  margin-bottom: 10px;
+}
+
+.balance-container h1 {
+  font-size: 50px;
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+
+/* =========================
+   SUMMARY CARDS
+========================= */
+
+.summary {
+  display: flex;
+  gap: 20px;
+}
+
+.income-box,
+.expense-box {
+  flex: 1;
+  border-radius: 18px;
+  padding: 22px;
+  color: white;
+  transition: .3s;
+}
+
+.income-box {
+  background: linear-gradient(135deg,#22c55e,#16a34a);
+}
+
+.expense-box {
+  background: linear-gradient(135deg,#ef4444,#dc2626);
+}
+
+.income-box:hover,
+.expense-box:hover {
+  transform: translateY(-5px);
+}
+
+.income-box h4,
+.expense-box h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.income-box p,
+.expense-box p {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+/* =========================
+   WHITE CARDS
+========================= */
+
+.transaction-form,
+.transaction-list,
+.chart-container {
+  background: white;
+  border-radius: 20px;
+  padding: 28px;
+  margin-bottom: 30px;
+  box-shadow: 0 15px 35px rgba(15,23,42,.08);
+  transition: .3s;
+}
+
+.transaction-form:hover,
+.transaction-list:hover,
+.chart-container:hover {
+  transform: translateY(-4px);
+}
+
+.transaction-form h3,
+.transaction-list h3,
+.chart-container h3 {
+  color: #2563eb;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+/* =========================
+   FORM
+========================= */
+
+.transaction-form label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #334155;
+}
+
+.transaction-form input,
+.transaction-form select {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 1px solid #d1d5db;
+  font-size: 15px;
+  margin-bottom: 18px;
+  transition: .3s;
+}
+
+.transaction-form input:focus,
+.transaction-form select:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 4px rgba(37,99,235,.15);
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+.transaction-form button {
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(135deg,#2563eb,#1d4ed8);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.transaction-form button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(37,99,235,.30);
+}
+
+/* =========================
+   TRANSACTION LIST
+========================= */
+
+.transaction-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f8fafc;
+  padding: 18px;
+  border-radius: 16px;
+  margin-bottom: 15px;
+  transition: .3s;
+}
+
+.transaction-item:hover {
+  background: white;
+  transform: translateX(5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,.08);
+}
+
+.transaction-item:last-child {
+  margin-bottom: 0;
+}
+
+.transaction-item h4 {
+  margin-bottom: 6px;
+  color: #0f172a;
+}
+
+.transaction-item p {
+  color: #64748b;
+}
+
+.transaction-item button {
+  border: none;
+  background: #ef4444;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: .3s;
+  font-weight: 600;
+}
+
+.transaction-item button:hover {
+  background: #dc2626;
+  transform: scale(1.05);
+}
+
+/* =========================
+   CHART
+========================= */
+
+.chart-container {
+  text-align: center;
+}
+
+/* =========================
+   SCROLLBAR
+========================= */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+  .container {
+    width: 95%;
+  }
+
+  .summary {
+    flex-direction: column;
+  }
+
+  .balance-container h1 {
+    font-size: 38px;
+  }
+
+  .header h1 {
+    font-size: 32px;
+  }
+
+  .transaction-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .transaction-item button {
+    width: 100%;
+  }
+}
+/* ===== Balance Card Upgrade ===== */
+
+.balance-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:30px;
+}
+
+.balance-subtitle{
+    color:rgba(255,255,255,.85);
+    margin-top:6px;
+    font-size:15px;
+}
+
+.balance-main{
+    margin-bottom:30px;
+}
+
+.balance-label{
+    color:rgba(255,255,255,.85);
+    font-size:18px;
+    margin-bottom:10px;
+}
+
+.balance-amount{
+    font-size:52px;
+    font-weight:700;
+    letter-spacing:1px;
+}
+
+.summary{
+    margin-top:10px;
+}
+
+.income-box,
+.expense-box{
+    display:flex;
+    align-items:center;
+    gap:18px;
+}
+
+.summary-icon{
+    font-size:40px;
+}
+
+.income-box h4,
+.expense-box h4{
+    text-align:left;
+}
+
+.income-box p,
+.expense-box p{
+    text-align:left;
+}
+/* =========================
+   TRANSACTION LIST UPGRADE
+========================= */
+
+.transaction-left{
+    display:flex;
+    align-items:center;
+    gap:18px;
+}
+
+.transaction-right{
+    text-align:right;
+}
+
+.transaction-icon{
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    background:#eff6ff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:26px;
+}
+
+.category-badge{
+    display:inline-block;
+    margin-top:8px;
+    padding:5px 12px;
+    border-radius:30px;
+    font-size:13px;
+    font-weight:600;
+}
+
+.income-badge{
+    background:#dcfce7;
+    color:#15803d;
+}
+
+.expense-badge{
+    background:#fee2e2;
+    color:#b91c1c;
+}
+
+.transaction-date{
+    margin-top:8px;
+    color:#64748b;
+    font-size:14px;
+}
+
+.income-text{
+    color:#16a34a;
+    font-weight:700;
+}
+
+.expense-text{
+    color:#dc2626;
+    font-weight:700;
+}
+
+.delete-btn{
+    margin-top:12px;
+    border:none;
+    background:#ef4444;
+    color:white;
+    padding:10px 18px;
+    border-radius:10px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.delete-btn:hover{
+    background:#dc2626;
+    transform:scale(1.05);
+}
+
+.empty-state{
+    text-align:center;
+    padding:60px 20px;
+}
+
+.empty-icon{
+    font-size:70px;
+    margin-bottom:20px;
+}
+
+.empty-state h4{
+    margin-bottom:10px;
+    color:#1e293b;
+}
+
+.empty-state p{
+    color:#64748b;
+}
+
+@media(max-width:768px){
+
+.transaction-left{
+    width:100%;
+}
+
+.transaction-right{
+    width:100%;
+    text-align:left;
+}
+
+.delete-btn{
+    width:100%;
+}
+}
+/* =========================
+   FORM UPGRADE
+========================= */
+
+.form-header{
+    margin-bottom:25px;
+}
+
+.form-header p{
+    color:#64748b;
+    margin-top:6px;
+}
+
+.expense-form{
+    width:100%;
+}
+
+.form-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+}
+
+.form-group{
+    display:flex;
+    flex-direction:column;
+}
+
+.form-group label{
+    margin-bottom:8px;
+    font-weight:600;
+    color:#334155;
+}
+
+.form-group input,
+.form-group select{
+    padding:14px 16px;
+    border-radius:12px;
+    border:1px solid #dbe3ec;
+    transition:.3s;
+    background:#fafcff;
+}
+
+.form-group input:focus,
+.form-group select:focus{
+    border-color:#2563eb;
+    background:white;
+    box-shadow:0 0 0 4px rgba(37,99,235,.12);
+}
+
+.submit-btn{
+    width:100%;
+    margin-top:28px;
+    padding:15px;
+    border:none;
+    border-radius:14px;
+    background:linear-gradient(135deg,#2563eb,#4f46e5);
+    color:white;
+    font-size:17px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.submit-btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 15px 30px rgba(37,99,235,.25);
+}
+
+.submit-btn:active{
+    transform:scale(.98);
+}
+
+@media(max-width:768px){
+
+.form-grid{
+    grid-template-columns:1fr;
+}
+
+.submit-btn{
+    margin-top:20px;
+}
+
+}
